@@ -4,12 +4,14 @@
 [![Coverage][badge-coverage]][codecoverage]
 [![Issues][badge-issues]][issue tracker]
 [![Stars][badge-stars]](https://github.com/davidrm-bio/prelude_py/stargazers)
-
+[![PyPI][badge-pypi]][pypi]
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/prelude-py?period=monthly&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=monthly+downloads)](https://pepy.tech/projects/prelude-py)
 
 [badge-tests]: https://img.shields.io/github/actions/workflow/status/davidrm-bio/prelude_py/test.yaml?branch=main
 [badge-issues]: https://img.shields.io/github/issues/davidrm-bio/prelude_py
 [badge-stars]: https://img.shields.io/github/stars/davidrm-bio/prelude_py?style=flat&logo=github&color=yellow
 [badge-coverage]: https://codecov.io/gh/davidrm-bio/prelude_py/branch/main/graph/badge.svg
+[badge-pypi]: https://img.shields.io/pypi/v/prelude_py.svg
 
 
 
@@ -73,7 +75,7 @@ do.pl.umap(adata, color="annotation")
 Output:
 
 <p align="center">
-  <img src="docs/images/matplotlib_example.png" alt="Matplotlib example plot" width="700">
+  <img src="docs/images/UMAP_annotation.png" alt="Matplotlib example plot" width="700">
 </p>
 
 
