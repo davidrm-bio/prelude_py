@@ -52,3 +52,10 @@ def test_pertpy():
     assert pt.__name__ == "pertpy"
 
 
+def test_unknown():
+    from prelude_py._utils import _load_package
+    try:
+        _load_package("unknown")
+    except ModuleNotFoundError:
+        pass
+

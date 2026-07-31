@@ -36,23 +36,46 @@ uv pip install "prelude_py[all]"
 ## Usage
 
 ```python
-from prelude_py import np, pd, plt, sc
+from prelude_py import np, pd, sns, plt
 
 # NumPy
-x = np.arange(10)
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
 
 # Pandas
-df = pd.DataFrame({"x": x})
+df = pd.DataFrame({"x": x, "sin(x)": y})
 
-# Matplotlib
-plt.plot(x, x ** 2)
+# Seaborn
+sns.set_theme(style="whitegrid")
+sns.lineplot(data=df, x="x", y="sin(x)")
+plt.title("Sine Wave")
+plt.tight_layout()
 plt.show()
-
-# Scanpy
-adata = sc.read_h5ad("dataset.h5ad")
 ```
 
-The first time an alias is accessed, the corresponding package is imported automatically. Subsequent accesses use the cached module.
+Output:
+
+<p align="center">
+  <img src="docs/images/matplotlib_example.png" width="700">
+</p>
+
+
+```python
+from prelude_py import do
+
+# Load example AnnData
+adata = do.dt.example_10x_processed()
+
+# Plot UMAP colored by cell annotation
+do.pl.umap(adata, color="annotation")
+```
+
+Output:
+
+<p align="center">
+  <img src="docs/images/matplotlib_example.png" alt="Matplotlib example plot" width="700">
+</p>
+
 
 ## Available aliases
 
@@ -65,13 +88,13 @@ The first time an alias is accessed, the corresponding package is imported autom
 | `mpl`  | `matplotlib`        |
 | `plt`  | `matplotlib.pyplot` |
 | `sns`  | `seaborn`           |
+| `do`   | `dotools_py`        |
 | `ad`   | `anndata`           |
 | `sc`   | `scanpy`            |
 | `dc`   | `decoupler`         |
 | `sq`   | `squidpy`           |
 | `pt`   | `pertpy`            |
 | `scvi` | `scvi`              |
-| `do`   | `dotools_py`        |
 
 ## License
 
