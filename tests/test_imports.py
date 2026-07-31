@@ -7,7 +7,6 @@ Created: 31.07.26 4:36pm
 
 Module description here.
 """
-import pytest
 from prelude_py import pd, pl, np, nb, mpl, plt, sns, ad, sc, do, dc, sq, scvi, pt
 
 def test_pandas():
@@ -47,7 +46,7 @@ def test_squidpy():
     assert sq.__name__ == "squidpy"
 
 def test_scvi():
-    assert scvi.__name__ == "scvi-tools"
+    assert scvi.__name__ == "scvi"
 
 def test_pertpy():
     assert pt.__name__ == "pertpy"
