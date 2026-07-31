@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Lazy imports for common scientific Python libraries."
 readme = "README.md"
 license = {file = "LICENSE"}
+requires-python = ">=3.10"
+
 
 authors = [
     {name = "David Rodriguez Morales", email = "rodriguezmorales@med.uni-frankfurt.de"}
@@ -16,7 +18,10 @@ maintainers = [
     {name = "David Rodriguez Morales", orcid = "0000-0002-1819-6991", email = "rodriguezmorales@med.uni-frankfurt.de" }
 ]
 
-requires-python = ">=3.10"
+keywords = [
+    "scientific-python",
+    "lazy-import",
+]
 
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
@@ -27,9 +32,13 @@ classifiers = [
 ]
 
 
-optional-dependencies.dev = [
-  "pre-commit",
-]
+
+[project.urls]
+Homepage = "https://github.com/davidrm-bio/prelude_py"
+Repository = "https://github.com/davidrm-bio/prelude_py"
+Issues = "https://github.com/davidrm-bio/prelude_py/issues"
+
+
 
 [project.optional-dependencies]
 all = [
@@ -45,66 +54,40 @@ all = [
     "decoupler",
     "squidpy",
     "scvi-tools",
-    "pertpy"
+    "pertpy",
 ]
 
-optional-dependencies.test = [
-    "numpy",
-    "numba",
-    "pandas",
-    "polars",
-    "matplotlib",
-    "seaborn",
-    "anndata",
-    "scanpy",
-    "dotools_py",
-    "decoupler",
-    "squidpy",
-    "scvi-tools",
-    "pertpy",
-    "pytest",
-    "coverage",
+dev = [
+    "pre-commit",
 ]
+
+test = [
+    "pytest>=8",
+    "coverage[toml]",
+]
+
+
 
 [tool.hatch.envs.default]
 installer = "uv"
 features = ["dev"]
 
-
-# Test the lowest and highest supported Python versions with normal deps
 [[tool.hatch.envs.hatch-test.matrix]]
-deps = ["stable"]
 python = ["3.11", "3.13"]
+deps = ["stable"]
 
-# Test the newest supported Python version also with pre-release deps
 [tool.hatch.envs.hatch-test]
 features = ["test"]
 
-[project.urls]
-Homepage = "https://github.com/davidrm-bio/prelude_py"
-Repository = "https://github.com/davidrm-bio/prelude_py"
-Issues = "https://github.com/davidrm-bio/prelude_py/issues"
-
 
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 xfail_strict = true
 addopts = [
-  "--import-mode=importlib", # allow using test files with same name
+    "--import-mode=importlib",
 ]
+
 
 [tool.coverage.run]
 source = ["prelude_py"]
-
-keywords = [
-    "scientific-python",
-    "lazy-import",
-]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-xfail_strict = true
-addopts = [
-  "--import-mode=importlib", # allow using test files with same name
-]
