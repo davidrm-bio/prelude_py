@@ -27,6 +27,10 @@ classifiers = [
 ]
 
 
+optional-dependencies.dev = [
+  "pre-commit",
+]
+
 [project.optional-dependencies]
 all = [
     "numpy",
@@ -57,11 +61,14 @@ optional-dependencies.test = [
     "decoupler",
     "squidpy",
     "scvi-tools",
-    "pertpy"
+    "pertpy",
+    "pytest",
+    "coverage",
 ]
 
 [tool.hatch.envs.default]
 installer = "uv"
+features = ["dev"]
 
 
 # Test the lowest and highest supported Python versions with normal deps
@@ -79,10 +86,6 @@ Repository = "https://github.com/davidrm-bio/prelude_py"
 Issues = "https://github.com/davidrm-bio/prelude_py/issues"
 
 
-[tool.ruff]
-line-length = 120
-src = ["src"]
-
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -97,4 +100,11 @@ source = ["prelude_py"]
 keywords = [
     "scientific-python",
     "lazy-import",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+xfail_strict = true
+addopts = [
+  "--import-mode=importlib", # allow using test files with same name
 ]

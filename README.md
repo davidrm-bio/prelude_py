@@ -3,7 +3,7 @@
 [![Tests][badge-tests]][tests]
 [![Coverage][badge-coverage]][codecoverage]
 [![Issues][badge-issues]][issue tracker]
-[![Stars][badge-stars]](https://github.com/davidrm-bio/DOTools_py/stargazers)
+[![Stars][badge-stars]](https://github.com/davidrm-bio/prelude_py/stargazers)
 
 [badge-tests]: https://img.shields.io/github/actions/workflow/status/davidrm-bio/prelude_py/test.yaml?branch=main
 [badge-issues]: https://img.shields.io/github/issues/davidrm-bio/prelude_py
