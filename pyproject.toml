@@ -1,0 +1,100 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+name = "prelude_py"
+version = "0.1.0"
+description = "Lazy imports for common scientific Python libraries."
+readme = "README.md"
+license = {file = "LICENSE"}
+
+authors = [
+    {name = "David Rodriguez Morales", email = "rodriguezmorales@med.uni-frankfurt.de"}
+]
+maintainers = [
+    {name = "David Rodriguez Morales", orcid = "0000-0002-1819-6991", email = "rodriguezmorales@med.uni-frankfurt.de" }
+]
+
+requires-python = ">=3.10"
+
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+
+[project.optional-dependencies]
+all = [
+    "numpy",
+    "numba",
+    "pandas",
+    "polars",
+    "matplotlib",
+    "seaborn",
+    "anndata",
+    "scanpy",
+    "dotools_py",
+    "decoupler",
+    "squidpy",
+    "scvi-tools",
+    "pertpy"
+]
+
+optional-dependencies.test = [
+    "numpy",
+    "numba",
+    "pandas",
+    "polars",
+    "matplotlib",
+    "seaborn",
+    "anndata",
+    "scanpy",
+    "dotools_py",
+    "decoupler",
+    "squidpy",
+    "scvi-tools",
+    "pertpy"
+]
+
+[tool.hatch.envs.default]
+installer = "uv"
+
+
+# Test the lowest and highest supported Python versions with normal deps
+[[tool.hatch.envs.hatch-test.matrix]]
+deps = ["stable"]
+python = ["3.11", "3.13"]
+
+# Test the newest supported Python version also with pre-release deps
+[tool.hatch.envs.hatch-test]
+features = ["test"]
+
+[project.urls]
+Homepage = "https://github.com/davidrm-bio/prelude_py"
+Repository = "https://github.com/davidrm-bio/prelude_py"
+Issues = "https://github.com/davidrm-bio/prelude_py/issues"
+
+
+[tool.ruff]
+line-length = 120
+src = ["src"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+xfail_strict = true
+addopts = [
+  "--import-mode=importlib", # allow using test files with same name
+]
+
+[tool.coverage.run]
+source = ["prelude_py"]
+
+keywords = [
+    "scientific-python",
+    "lazy-import",
+]
