@@ -1,0 +1,3 @@
+.idea
+src/prelude_py.egg-info/*
+uv.lock
