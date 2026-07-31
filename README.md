@@ -5,6 +5,7 @@
 [![Issues][badge-issues]][issue tracker]
 [![Stars][badge-stars]](https://github.com/davidrm-bio/prelude_py/stargazers)
 
+
 [badge-tests]: https://img.shields.io/github/actions/workflow/status/davidrm-bio/prelude_py/test.yaml?branch=main
 [badge-issues]: https://img.shields.io/github/issues/davidrm-bio/prelude_py
 [badge-stars]: https://img.shields.io/github/stars/davidrm-bio/prelude_py?style=flat&logo=github&color=yellow
@@ -75,3 +76,9 @@ The first time an alias is accessed, the corresponding package is imported autom
 ## License
 
 This project is distributed under the MIT License.
+
+[issue tracker]: https://github.com/davidrm-bio/prelude_py/issues
+[tests]: https://github.com/davidrm-bio/prelude_py/actions/workflows/test.yaml
+[pypi]: https://pypi.org/project/prelude_py/
+[codecoverage]: https://codecov.io/gh/davidrm-bio/prelude_py
+[down]: https://pepy.tech/project/dotools-py
