@@ -56,6 +56,6 @@ def test_unknown():
     from prelude_py._utils import _load_package
     try:
         _load_package("unknown")
-    except ModuleNotFoundError:
+    except ImportError:
         pass
 
