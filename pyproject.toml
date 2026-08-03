@@ -30,10 +30,6 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
-dependencies = [
-    "pandas",
-    "numpy"
-]
 
 
 
@@ -43,6 +39,10 @@ Repository = "https://github.com/davidrm-bio/prelude_py"
 Issues = "https://github.com/davidrm-bio/prelude_py/issues"
 
 
+dependencies = [
+    "pandas",
+    "numpy"
+]
 
 [project.optional-dependencies]
 all = [
