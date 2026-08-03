@@ -32,6 +32,10 @@ classifiers = [
 ]
 
 
+dependencies = [
+    "pandas",
+    "numpy"
+]
 
 [project.urls]
 Homepage = "https://github.com/davidrm-bio/prelude_py"
@@ -39,10 +43,6 @@ Repository = "https://github.com/davidrm-bio/prelude_py"
 Issues = "https://github.com/davidrm-bio/prelude_py/issues"
 
 
-dependencies = [
-    "pandas",
-    "numpy"
-]
 
 [project.optional-dependencies]
 all = [
