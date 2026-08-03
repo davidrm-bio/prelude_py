@@ -31,12 +31,8 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "decoupler>=2.1.4",
-    "dotools-py>=0.0.4",
-    "pertpy>=0.10.0",
-    "polars>=1.43.1",
-    "scvi>=0.6.8",
-    "squidpy>=1.6.5",
+    "pandas",
+    "numpy"
 ]
 
 
