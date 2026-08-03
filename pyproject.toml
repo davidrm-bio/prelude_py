@@ -4,7 +4,7 @@ requires = ["hatchling"]
 
 [project]
 name = "prelude_py"
-version = "0.1.0"
+version = "0.2.0"
 description = "Lazy imports for common scientific Python libraries."
 readme = "README.md"
 license = {file = "LICENSE"}
