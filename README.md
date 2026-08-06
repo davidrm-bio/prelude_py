@@ -82,7 +82,7 @@ Output:
 ## Available aliases
 
 | Alias  | Package             |
-| ------ | ------------------- |
+| ------ |---------------------|
 | `np`   | `numpy`             |
 | `nb`   | `numba`             |
 | `pd`   | `pandas`            |
@@ -96,7 +96,7 @@ Output:
 | `dc`   | `decoupler`         |
 | `sq`   | `squidpy`           |
 | `pt`   | `pertpy`            |
-| `scvi` | `scvi`              |
+| `scvi` | `scvi-tools`            |
 
 ## License
 
