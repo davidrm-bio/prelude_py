@@ -33,15 +33,18 @@ if TYPE_CHECKING:
 
 
 _aliases = {
+    # Data Manipulation
     "pd": "pandas",
     "pl": "polars",
     "np": "numpy",
     "nb": "numba",
 
+    # Visualisation
     "mpl":"matplotlib",
     "plt": "matplotlib.pyplot",
     "sns": "seaborn",
 
+    # scverse
     "ad": "anndata",
     "sc": "scanpy",
     "do": "dotools_py",
