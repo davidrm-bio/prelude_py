@@ -9,11 +9,6 @@ Module description here.
 """
 from prelude_py import pd, pl, np, nb, mpl, plt, sns, ad, sc, do, dc, sq, scvi
 
-try:
-    from prelude_py import pt  # Fails because of dependencies todo check
-except ImportError:
-    pass
-
 def test_pandas():
     assert pd.__name__ == "pandas"
 
@@ -54,10 +49,12 @@ def test_scvi():
     assert scvi.__name__ == "scvi"
 
 def test_pertpy():
+
     try:
+        from prelude_py import pt
         assert pt.__name__ == "pertpy"
-    except AssertionError:
-        pass
+    except ImportError:
+        print("Failed pertpy import")
 
 def test_unknown():
     from prelude_py._utils import _load_package
