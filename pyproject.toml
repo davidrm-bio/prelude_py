@@ -84,6 +84,8 @@ test = [
     "squidpy",
     "scvi-tools",
     "pertpy",
+    "xgboost",
+    "torch"
 ]
 
 
