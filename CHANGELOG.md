@@ -19,9 +19,8 @@ and this project adheres to [Semantic Versioning][].
 
 ## Version 0.2.0 {small}`2026-08-03`
 
-Correction of bugs and update parameters naming for consistency across functions.
+Release of prelude_py
 
 ## Version 0.1.0 {small}`2026-07-31`
 
-Pre-release of DoTools, a convenient and user-friendly package to streamline common workflows in single-cell RNA
-sequencing data analysis using the scverse ecosystem.
+Initial pre-release 
