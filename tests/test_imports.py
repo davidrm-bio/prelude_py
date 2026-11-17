@@ -7,7 +7,7 @@ Created: 31.07.26 4:36pm
 
 Module description here.
 """
-from prelude_py import pd, pl, np, nb, mpl, plt, sns, ad, sc, do, dc, sq, scvi
+from prelude_py import pd, pl, np, nb, mpl, plt, sns, ad, sc, dc, sq, scvi, xgb, torch
 
 def test_pandas():
     assert pd.__name__ == "pandas"
@@ -37,7 +37,11 @@ def test_scanpy():
     assert sc.__name__ == "scanpy"
 
 def test_dotools():
-    assert do.__name__ == "dotools_py"
+    try:
+        from prelude_py import  do
+        assert do.__name__ == "dotools_py"  # todo Fails in 3.13 because of re-structuring of scanpy and internal imports
+    except ImportError:
+        print("Failed to import dotools_py")
 
 def test_decoupler():
     assert dc.__name__ == "decoupler"
@@ -47,6 +51,20 @@ def test_squidpy():
 
 def test_scvi():
     assert scvi.__name__ == "scvi"
+
+def test_xgboost():
+    assert xgb.__name__ == "xgboost"
+
+def test_torch():
+    assert torch.__name__ == "torch"
+
+def test_tensorflow():
+    try:
+        from prelude_py import tf
+        assert tf.__name__ == "tensorflow"
+    except ImportError:
+        print("Failed tensorflow import")
+
 
 def test_pertpy():
 

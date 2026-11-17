@@ -97,6 +97,9 @@ Output:
 | `sq`   | `squidpy`           |
 | `pt`   | `pertpy`            |
 | `scvi` | `scvi-tools`            |
+| `xgb` | `xgboost`            |
+| `tf` | `tensorflow`            |
+| `torch` | `torch`            |
 
 ## License
 

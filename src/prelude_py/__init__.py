@@ -30,6 +30,9 @@ if TYPE_CHECKING:
 
     import scvi
 
+    import xgboost as xgb
+    import tensorflow as tf
+    import torch
 
 
 _aliases = {
@@ -52,6 +55,11 @@ _aliases = {
     "sq": "squidpy",
     "scvi": "scvi",
     "pt": "pertpy",
+
+    # Machine learning
+    "xgb": "xgboost",
+    "tf": "tensorflow",
+    "torch":"torch",
 
 }
 
